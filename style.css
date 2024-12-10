@@ -82,6 +82,7 @@ div:has(#introImage) {
 /* TOOLS SECTION*/
 #tools{
     height: max-content;
+    width: auto;
 
 }
 #toolsWrapper{
@@ -199,9 +200,16 @@ footer p {
     margin: 0;
     font-size: 1rem;
 }
-
 @media (max-width: 767px) {
     #Linear{
         flex-direction: column-reverse;
+    }
+    #toolsWrapper{
+        margin: 6rem auto;
+        width: 80;
+    }
+    .toolIcons{
+        padding: 1rem;
+        font-size: 2rem;
     }
 }
