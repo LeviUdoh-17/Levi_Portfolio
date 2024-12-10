@@ -1,0 +1,207 @@
+body{
+    background-color: #080808;
+    overflow-x: hidden;
+    font-family: "Inter", serif;
+
+}
+
+/* NAV SECTION */
+#navSection{
+    border: 1px solid #2458b9d3;
+    background-color: #1B1B1B;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.nav-link{
+    color: #9C9C9C !important;
+}
+.nav-link:hover{
+    color: #b7b7b7 !important;
+}
+.active{
+    color: #b7b7b7 !important;
+}
+
+/* INTRO SECTION */
+#intro{
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    /* height: 100vh; */
+}
+#intro>.row{
+    z-index: 1;
+}
+#IntroHeading{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+}
+#Intro-text{
+    font-family: "Nunito Sans", serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+}
+.blink {
+    animation: blink-effect 0.5s alternate infinite;
+}
+
+@keyframes blink-effect {
+    0% {
+        background-color: #0d6efd;
+        color: white;
+    }
+    100% {
+        background-color: transparent;
+        color: inherit;
+    }
+}
+
+#IntroButton{
+    box-shadow: 1px 1px 5px #2458b9d3, 
+                1px 1px 5px#365faad3, 
+                1px 1px 5px #5d76a3d3;
+}
+#offcanvasBottom{
+    height: max-content;    
+}
+#introImage {
+    width: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+div:has(#introImage) {
+    background-color: black; /* Ensure the background is black */
+}
+/* TOOLS SECTION*/
+#tools{
+    height: max-content;
+
+}
+#toolsWrapper{
+    background: linear-gradient(to right, #1B1B1B, #0d6efd);
+    height: 100%;
+    width: 80vw;
+    margin: 6rem auto;
+    border-radius: 1rem;
+}
+#toolsWrapper>div{
+    width: 99.7%;
+    background-color: #1B1B1B;
+    margin: auto;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.toolIcons{
+    font-size: 4rem;
+    color: #b7b7b7;
+    padding: 3rem;
+}
+
+/* PROJECT */
+#projects{
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#projects h2 {
+    font-weight: 600;
+    font-size: 2.5rem; /* Increase the main heading size */
+    margin-bottom: 2rem;
+}
+
+#projects h3 {
+    font-weight: 500;
+    font-size: 1.8rem; /* Adjust the subheading size */
+}
+
+#projects p {
+    font-size: 1.1rem; /* Adjust the paragraph font size */
+    line-height: 1.5; /* Increase line spacing for better readability */
+    margin-bottom: 1.5rem; /* Add space below the paragraph */
+    padding-top: 1rem;
+}
+
+.projectImages {
+    width: 100%;
+    box-shadow: 1px 1px 5px #263450d3, 
+                1px 1px 5px #394254d3, 
+                1px 1px 5px #535353d3;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.project-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem; /* Add space between project containers */
+}
+
+.project-container .visit-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.project-container:hover .projectImages {
+    filter: blur(5px);
+}
+
+.project-container:hover .visit-button {
+    display: block;
+}
+
+.project-container .visit-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* FOOTER */
+.email-button {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.email-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+footer {
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+    #Linear{
+        flex-direction: column-reverse;
+    }
+}
