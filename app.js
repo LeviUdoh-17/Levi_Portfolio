@@ -8,4 +8,4 @@ document.querySelector('.nav-link[href="#intro"]').addEventListener('click', fun
     }, 3000); // Blink effect lasts 3 seconds
 });
 
-document.getElementById("copyright").innerHTML = `&copy; Levi Udoh @ ${new Date().getFullYear()}`;
+document.getElementById("copyright").innerHTML = `Copyright &copy ${new Date().getFullYear()}; Levi Udoh. All rights reserved`;
