@@ -208,9 +208,6 @@ footer p {
     }
 }
 @media (max-width: 767px) {
-    #Linear{
-        flex-direction: column-reverse;
-    }
     #toolsWrapper{
         margin: 6rem auto;
         width: 80;
