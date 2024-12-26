@@ -43,6 +43,14 @@ body{
     font-weight: 400;
     color: #fff;
 }
+.typing {
+    background: linear-gradient(to right, #0d6efd, #00c6ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
 .blink {
     animation: blink-effect 0.5s alternate infinite;
 }
