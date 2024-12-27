@@ -42,3 +42,36 @@ let letter = '';
 
 // Set the current year in the footer
 document.getElementById("copyright").innerHTML = `Copyright &copy ${new Date().getFullYear()}; Levi Udoh. All rights reserved`;
+
+// Fade out effect on scroll for tools section
+window.addEventListener('scroll', function() {
+    const toolsWrapper = document.getElementById('toolsWrapper');
+    const rect = toolsWrapper.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight && rect.bottom > 0) {
+        const opacity = 1 - Math.abs(rect.top) / windowHeight;
+        toolsWrapper.style.opacity = opacity;
+        toolsWrapper.style.transform = `translateY(${rect.top * 0.2}px)`;
+    }
+});
+
+// Gradient effect on mouse hover for toolsWrapper
+const toolsWrapper = document.getElementById('toolsWrapper');
+toolsWrapper.addEventListener('mousemove', function(e) {
+    const rect = toolsWrapper.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const distanceX = Math.abs(centerX - x);
+    const distanceY = Math.abs(centerY - y);
+    const maxDistance = Math.max(centerX, centerY);
+    const brightness = 1 - Math.max(distanceX, distanceY) / maxDistance;
+
+    toolsWrapper.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 255, ${brightness}), rgba(27, 27, 27, 1))`;
+});
+
+toolsWrapper.addEventListener('mouseleave', function() {
+    toolsWrapper.style.background = 'linear-gradient(135deg, #1B1B1B, #0d6efd)';
+});
