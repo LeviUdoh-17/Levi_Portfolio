@@ -29,27 +29,7 @@ body{
     margin-right: 5rem;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(0, 0, 50, 0.8), rgba(0, 0, 100, 0.8)), url('/path/to/your/image.jpg') no-repeat center center/cover;
     animation: fadeIn 2s ease-in-out;
-}
-#intro::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 255, 0.1));
-    animation: rotate 20s linear infinite;
-    z-index: 0;
-}
-@keyframes rotate {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
 }
 @keyframes fadeIn {
     0% {
@@ -81,7 +61,8 @@ body{
 }
 #Intro-text{
     font-family: "Nunito Sans", serif;
-    font-size: 1.2rem;
+    font-size: 100%;
+    height: 10rem;
     font-weight: 400;
     color: #fff;
 }
@@ -91,7 +72,7 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 100%;
 }
 .blink {
     animation: blink-effect 0.5s alternate infinite;
@@ -169,7 +150,7 @@ div:has(#introImage) {
     margin: 6rem auto;
     border-radius: 1rem;
     padding: .1rem;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out, background 0.3s ease-in-out;
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out, background 0.3s ease-in-out;
     background: linear-gradient(135deg, #1B1B1B, #0d6efd);
 }
 #toolsWrapper>div{
@@ -183,7 +164,17 @@ div:has(#introImage) {
     font-size: 4rem;
     color: #b7b7b7;
     padding: 3rem;
+    padding-bottom: 0.6rem;
     transition: transform 0.3s ease-in-out;
+}
+.toolText {
+    font-size: 1rem;
+    background-color: #b7b7b7;
+    /* background: linear-gradient(to right, #b7b7b7, #006eff); */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 .toolIcons:hover {
     transform: scale(1.2) translateY(-10px);
@@ -211,7 +202,7 @@ div:has(#introImage) {
 }
 
 #projects p {
-    font-size: 1.2rem; /* Adjust the paragraph font size */
+    font-size: 0.9rem; /* Adjust the paragraph font size */
     line-height: 1.5; /* Increase line spacing for better readability */
     margin: 1.5rem auto;
     width: 90%;
@@ -298,6 +289,22 @@ footer p {
         padding: 0 1rem;
     }
 }
+@media (max-width: 553px){
+#Intro-text{
+    height: 35vh;
+}
+@media (max-width: 470px){
+#Intro-text{
+    height: 45vh;
+}
+@media (max-width: 415px){
+#Intro-text{
+    height: 55vh;
+}
+@media (max-width: 385px){
+#Intro-text{
+    height: 65vh;
+}
 @media (max-width: 767px) {
     #toolsWrapper{
         margin: 6rem auto;
@@ -306,5 +313,14 @@ footer p {
     .toolIcons{
         padding: 1rem;
         font-size: 2rem;
+    }
+    #Linear{
+        flex-flow: column-reverse;
+    }
+    #Linear h3{
+        padding-left: 2rem;
+    }
+    #Linear h3, #Linear p {
+        text-align: start !important;
     }
 }

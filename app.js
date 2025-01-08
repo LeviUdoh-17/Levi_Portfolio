@@ -52,7 +52,7 @@ window.addEventListener('scroll', function() {
     if (rect.top < windowHeight && rect.bottom > 0) {
         const opacity = 1 - Math.abs(rect.top) / windowHeight;
         toolsWrapper.style.opacity = opacity;
-        toolsWrapper.style.transform = `translateY(${rect.top * 0.2}px)`;
+        toolsWrapper.style.transform = `translateY(${rect.top * 0.1}px)`;
     }
 });
 
