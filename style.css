@@ -1,5 +1,5 @@
 body{
-    background-color: #080808;
+    background-color: #080808 !important;
     overflow-x: hidden;
     font-family: "Inter", serif;
 }
@@ -30,6 +30,7 @@ body{
     position: relative;
     overflow: hidden;
     animation: fadeIn 2s ease-in-out;
+    background-color: #080808 !important;
 }
 @keyframes fadeIn {
     0% {
@@ -131,9 +132,7 @@ body{
         box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
     }
 }
-div:has(#introImage) {
-    background-color: black; /* Ensure the background is black */
-}
+
 #resume{
     text-decoration: none;
 }
@@ -293,19 +292,22 @@ footer p {
 #Intro-text{
     height: 35vh;
 }
+}
 @media (max-width: 470px){
 #Intro-text{
     height: 45vh;
+}
 }
 @media (max-width: 415px){
 #Intro-text{
     height: 55vh;
 }
+}
 @media (max-width: 385px){
 #Intro-text{
     height: 65vh;
 }
-@media (max-width: 767px) {
+@media (max-width: 967px) {
     #toolsWrapper{
         margin: 6rem auto;
         width: 80;
@@ -323,4 +325,4 @@ footer p {
     #Linear h3, #Linear p {
         text-align: start !important;
     }
-}
+}}
